@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+/***header***/
+
+#hsrac {
+	color: white;
+	margin-top: -1%;
+	text-align: center;
+	h1 {
+		font-size: 60px;
+	}
+}
+
+@media screen and (max-device-width: 800px) {
+	body { background: url(phttps://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg) #000 no-repeat center center fixed; }
+	#bgvid { display: none; }
+}
+
+video#bgvid {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg) no-repeat;
+	background-size: cover;
+}
+
+#thumbnails {
+	margin-top: 15%;
+
+	h2 {
+		color: #2d5c88;
+	}
+}
+
+
+/***footer***/
+
+footer {
+	margin-top: 5%;
+	background-color: #f6f9fa;
+	padding-bottom: 2%;
+}
+
+#connect {
+	color: #2d5c88;
+}
+
+#facebook {
+	margin-left: -2%;
+}
+
+#youtube {
+	margin-left: -2%;
+}
+
+.copyright {
+	padding-top: 2%;
+}
