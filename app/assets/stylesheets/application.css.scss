@@ -23,16 +23,11 @@
 
 #hsrac {
 	color: white;
-	margin-top: -1%;
+	padding-top: 6%;
 	text-align: center;
 	h1 {
 		font-size: 60px;
 	}
-}
-
-@media screen and (max-device-width: 800px) {
-	body { background: url(phttps://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg) #000 no-repeat center center fixed; }
-	#bgvid { display: none; }
 }
 
 video#bgvid {
@@ -46,12 +41,13 @@ video#bgvid {
 	z-index: -100;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
-	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg) no-repeat;
+	background: url(video-bg.jpg) no-repeat;
 	background-size: cover;
 }
 
 #thumbnails {
-	margin-top: 15%;
+	margin-top: 25%;
+	margin-left: 10%;
 
 	h2 {
 		color: #2d5c88;
@@ -63,6 +59,7 @@ video#bgvid {
 
 #feature-in {
 	margin-top: 8%;
+	margin-left: 10%;
 	h4 {
 		padding-top: 5%;
 		color: #c6cccf;
