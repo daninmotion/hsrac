@@ -21,18 +21,12 @@
 
 /***header***/
 
-#hsrac {
+#vid h1 {
+	padding-top: 18%;
+	font-size: 4em;
 	color: white;
 	text-align: center;
-	h1 {
-		margin-top: 20%;
-		font-size: 60px;
-	}
 }
-
-/*#vid {
-	margin-bottom: -20%;
-}*/
 
 video#bgvid {
 	position: absolute;
@@ -41,7 +35,7 @@ video#bgvid {
 	min-width: 100%;
 	min-height: 100%;
 	width: auto;
-	height: 730px;
+	height: auto;
 	z-index: -100;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
@@ -50,7 +44,7 @@ video#bgvid {
 }
 
 #thumbnails {
-	margin-top: 40%;
+	margin-top: 27%;
 	margin-left: 10%;
 
 	h2 {
@@ -96,4 +90,28 @@ footer {
 
 .copyright {
 	padding-top: 2%;
+}
+
+@media screen and (max-device-width: 800px) {
+     #bgvid {
+        display: none;
+    }
+
+    .jumbotron {
+    	background-color: #2d5c88;
+    	color: white;
+    	text-align: center;
+    }
+
+    #thumbnails {
+    	margin-top: -80%;
+    }
+
+}
+	
+@media screen and (min-device-width: 768px) {
+    .jumbotron {
+    	display: none;
+    }
+
 }
