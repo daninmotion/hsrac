@@ -1,13 +1,19 @@
 <div class="container">
-	<h1 class="title">
-		<%= @post.title %>
-	</h1>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="page-header" id="showpage_title">
+				<h1 class="title">
+					<%= @post.title %>
+				</h1>
 
-	<p class="date">
-		Submitted <%= time_ago_in_words(@post.created_at) %> Ago
-	</p>
+				<p class="date">
+					Submitted <%= time_ago_in_words(@post.created_at) %> Ago
+				</p>
 
-	<p class="body">
-		<%= @post.body %>
-	</p>
+				<p class="body">
+					<%= @post.body %>
+				</p>
+			</div>
+		</div>
+	</div>
 </div>
