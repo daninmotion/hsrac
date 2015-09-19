@@ -65,7 +65,9 @@
 				<img src="/assets/youtube.png" class="img-responsive" atl="youtube" >
 			</div>
 			<div class="col-md-3 col-md-offset-6" id ="member_login">
-				<h2><%= link_to "Member Login", posts_path %></h2>
+				<% if !user_signed_in? %>
+					<h2><%= link_to "Member Login", posts_path %></h2>
+				<% end %>
 			</div>
 		</div>
 		<div class="row">
