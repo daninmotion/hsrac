@@ -8,7 +8,7 @@ gem 'sqlite3', group: :development
 gem  'pg', group: :production
 gem 'devise', '~> 3.5.2'
 gem 'paperclip', '~> 4.3.1'
-gem 'aws-sdk', '~> 2.1.23'
+gem 'aws-sdk', '< 2.0'
 
 gem 'bootstrap-sass', '~> 3.3.5.1'
 # Use SCSS for stylesheets
