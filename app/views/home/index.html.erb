@@ -21,7 +21,7 @@
 <div class="container">
 	<div class="row" id="thumbnails">
 		<div class="col-xs-6 col-md-4">
-			<h2><%= link_to "Research", posts_path %></h2>
+			<h2><%= link_to "Research", posts_path, target: "_blank" %></h2>
 			<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" src="/assets/research.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
 		</div>
 		<div class="col-xs-6 col-md-4">
@@ -55,13 +55,19 @@
 		</div>
 		<div class="row">
 			<div class="col-md-1" id="twitter">
-				<img src="/assets/twitter.png" class="img-responsive" atl="twitter" >
+				<a href="https://twitter.com/HSRAClub" target="_blank">
+					<img src="/assets/twitter.png" class="img-responsive" atl="twitter" >
+				</a>
 			</div>
 			<div class="col-md-1" id ="facebook">
-				<img src="/assets/facebook.png" class="img-responsive" atl="facebook" >
+				<a href="https://www.facebook.com/groups/hsrac/" target="_blank">
+					<img src="/assets/facebook.png" class="img-responsive" atl="facebook" >
+				</a>
 			</div>
 			<div class="col-md-1" id ="youtube">
-				<img src="/assets/youtube.png" class="img-responsive" atl="youtube" >
+				<a href="https://www.youtube.com/channel/UCpiBD6csbMlsEt20d_CmRCA" target="_blank">
+					<img src="/assets/youtube.png" class="img-responsive" atl="youtube" >
+				</a>
 			</div>
 			<div class="col-md-3 col-md-offset-6" id ="member_login">
 				<% if !user_signed_in? %>
