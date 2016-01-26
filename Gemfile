@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
-gem  'pg', group: :production
 gem 'devise', '~> 3.5.2'
 gem 'paperclip', '~> 4.3.1'
 gem 'aws-sdk', '< 2.0'
@@ -39,7 +38,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -21,7 +21,7 @@
 <div class="container">
 	<div class="row" id="thumbnails">
 		<div class="col-xs-6 col-md-4">
-			<h2><%= link_to "Research", posts_path, target: "_blank" %></h2>
+			<h2>Research</h2>
 			<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" src="/assets/research.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
 		</div>
 		<div class="col-xs-6 col-md-4">
@@ -78,11 +78,6 @@
 				<a href="https://www.youtube.com/channel/UCpiBD6csbMlsEt20d_CmRCA" target="_blank">
 					<img src="/assets/youtube.png" class="img-responsive" atl="youtube" >
 				</a>
-			</div>
-			<div class="col-md-3 col-md-offset-6" id ="member_login">
-				<% if !user_signed_in? %>
-					<h2><%= link_to "Member Login", user_session_path %></h2>
-				<% end %>
 			</div>
 		</div>
 		<div class="row">
