@@ -1,28 +1,16 @@
 <div class="container">
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-			<div class="page-header" id="showpage_title">
-				<h1 class="title">
-					<%= @post.title %>
-				</h1>
-
-				<%= image_tag @post.image.url(:large) %>
-
-				<p class="date">
-					Submitted <%= time_ago_in_words(@post.created_at) %> Ago
-					<% if user_signed_in? %>
-						| <%= link_to 'Edit', edit_post_path(@post) %>
-						| <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
-						| <%= link_to 'All Posts', posts_path %>
-						| <%= link_to "Home", root_path %>
-					<% end %>
-
-				</p>
-
-				<p class="body">
-					<%= @post.body.html_safe %>
-				</p>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-md-2">
+      <%= image_tag @post.image, class: "img-thumbnail" %>
+    </div>
+    <div class="col-md-10">
+      <%= @post.body.truncate(700).html_safe %>
+      <p class="text-muted"> 
+        <em>Posted on <%= @post.created_at.to_formatted_s(:long) %></em>
+      </p>
+      <%= link_to 'Edit', edit_post_path(@post) %> |
+      <%= link_to 'Back', posts_path %>
+      </p>
+    </div>
+  </div>
 </div>
