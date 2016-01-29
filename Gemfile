@@ -4,11 +4,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: :development
 gem 'devise', '~> 3.5.2'
-gem 'paperclip', '~> 4.3.1'
+gem 'carrierwave', '~> 0.10.0'
 gem 'aws-sdk', '< 2.0'
 gem 'trix'
+gem 'figaro'
+gem 'fog'
 
 gem 'bootstrap-sass', '~> 3.3.5.1'
 # Use SCSS for stylesheets
@@ -37,6 +38,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+group :development do
+  gem 'sqlite3'
+end
 
 group :production do
   gem 'pg'
