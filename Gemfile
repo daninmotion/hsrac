@@ -10,6 +10,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'trix'
 gem 'figaro'
 gem 'fog'
+gem 'mini_magick'
 
 gem 'bootstrap-sass', '~> 3.3.5.1'
 # Use SCSS for stylesheets

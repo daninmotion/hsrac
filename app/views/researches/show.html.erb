@@ -1,0 +1,15 @@
+
+<div class="container">
+  <div class="col-sm-8 blog-main">
+    <p>
+      <%= image_tag @research.image, class: "img-thumbnail" %>
+    </p>
+   
+    <h1><%= @research.title %></h1>
+    <%= link_to 'Edit', edit_research_path(@research) %> |
+    <%= link_to 'Back', researches_path %>
+    <!--/.blog-post-->
+    <br><br/>
+    <%= @research.content.html_safe %>
+  </div>
+</div>
