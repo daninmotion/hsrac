@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8 blog-main">
-      <%= link_to 'New Research', new_research_path, class: "btn btn-primary" %>
+      <% if current_user %>
+        <%= link_to 'Sign Out', destroy_user_session_path %><br><br>
+        <%= link_to 'New Research', new_research_path, class: "btn btn-primary" %>
+      <% end %>
       <br><br/>
       <% @researches.each do |research| %>
         <%= image_tag research.image, class: "img-thumbnail" %>
@@ -21,3 +24,6 @@
     </div>
   </div>
 </div>
+
+
+
