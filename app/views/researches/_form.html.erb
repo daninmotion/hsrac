@@ -10,19 +10,19 @@
       </ul>
     </div>
   <% end %>
-  <p>
+  <class="form-group">
     <%= f.label :image %><br>
     <%= f.file_field :image %>
   </p>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :content %><br>
-    <%= f.trix_editor :content %>
+    <%= f.trix_editor :content, class: "content" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
