@@ -10,10 +10,12 @@
         <%= image_tag research.image, class: "img-thumbnail" %>
         <h2 class="blog-post-title"><%= research.title %></h2>
         <p class="blog-post-meta"><%= research.created_at.to_formatted_s(:long) %></p>
-        <%= link_to 'Show', research %> |
-        <%= link_to 'Edit', edit_research_path(research) %> |
-        <%= link_to 'Destroy', research, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <br><br/>
+        <% if current_user %>
+          <%= link_to 'Show', research %> |
+          <%= link_to 'Edit', edit_research_path(research) %> |
+          <%= link_to 'Destroy', research, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <br><br/>
+        <% end %>
         <div class="blog-post">
           <%= research.content.html_safe %>
           <hr class="articlesplit"></hr>

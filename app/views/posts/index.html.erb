@@ -19,6 +19,11 @@
             </div>
             <div class="col-md-9">
               <%= post.body.truncate(700).html_safe %>
+              <% if current_user %>
+                <%= link_to 'Show', post %> |
+                <%= link_to 'Edit', edit_post_path(post) %> |
+                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% end %>
             </div>
           </td>
         </tr>
