@@ -19,6 +19,7 @@
             </div>
             <div class="col-md-9">
               <%= post.body.truncate(700).html_safe %>
+              <br><br>
               <% if current_user %>
                 <%= link_to 'Show', post %> |
                 <%= link_to 'Edit', edit_post_path(post) %> |
